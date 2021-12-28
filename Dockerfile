@@ -13,5 +13,5 @@ COPY . .
 
 
 # start to run the server
-CMD [ "cd" "fruit_veg" ]
+CMD [ "cd", "fruit_veg" ]
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
