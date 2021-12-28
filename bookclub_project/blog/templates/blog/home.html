@@ -1,0 +1,178 @@
+
+{% extends "blog/base.html" %}
+{% block content %}
+{% load static %}
+    <!--Newsletter-->
+    <section id="news" class="bg-primary text-light p-5 text-white bg-opacity-75">
+
+        <div class="container">
+            <div class="d-md-flex justify-content-between align-items-center">
+                <h3 class="mb-3 mb-md-0">Sign up for our weekly newsletter on health and more!</h3>
+
+                <div class="input-group news-input">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{form}}
+                        <input type="submit">
+
+                    </form>
+                    {% comment %} <input type="text" class="form-control" placeholder="E-mail" />
+                    <button class="btn btn-dark btn-lg" type="button"> Button</button> {% endcomment %}
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--Boxes-->
+
+    <section class="p-5">
+        <div class="container">
+            <div class="row text-center g-4">
+                <!--Box#1-->
+              <div class="col-md">
+                  <div class="card bg-success text-light">
+                      <div card="card-body text-center">
+                        <div class="h1 mb-2">                            
+                            <i class="bi bi-person-check"></i> 
+                        </div>
+                        <h3 class="card-title mb-3">
+                            Know the Grower
+                        </h3>
+                        <p class="card-">
+                            At our mart, the farmers come to the booths and sell their produce. Stick around and have a talk about the how they grow and harvest.
+                        </p>
+                        <a href="#" class="btn btn-dark"> Read More </a>
+                      </div>
+                  </div>
+              </div> 
+              
+
+                
+             
+                      <!--Box#3-->
+              <div class="col-md">
+                <div class="card bg-success text-light">
+                    <div card="card-body text-center">
+                      <div class="h1 mb-2">                            
+                        <i class="bi bi-cart-check"></i>                          
+                    </div>
+                      <h3 class="card-title mb-3">
+                          Queue Ordering
+                      </h3>
+                      <p class="card-">
+                          We understand that you are busy and that is okay. You can order your goods upto 6* hours in advance.
+                      </p>
+                      <a href="#" class="btn btn-dark"> Read More </a>
+                    </div>
+                </div>
+            </div>
+
+                                      <!--Box#2-->
+              <div class="col-md">
+                <div class="card bg-success text-light">
+                    <div card="card-body text-center">
+                      <div class="h1 mb-2">                            
+                          <i class="bi bi-wallet"></i>
+                      </div>
+                      <h3 class="card-title mb-3">
+                        Diversified forms of payment
+                    </h3>
+                      <p class="card-">
+                        We are proud to implement cryptocurrency as a form of payment.
+                    </p>
+                      <a href="#" class="btn btn-dark"> Read More </a>
+                    </div>
+                </div>
+            </div>
+              
+            </div>
+        </div>
+    </section>
+
+
+    <!--More about-->
+    <section id="learn" class="p-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md">
+                    <img src="{% static '/imgs/carrot.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-md p-5">
+                    <h2>Over 20 years</h2>
+                    <p class="lead">We have been providing organic fruits and vegetables to New York City for decades.
+                    <p> Keeping the city that never sleeps, pick the healthiest options.</p>
+                    </p>
+                    <a href="#" class="btn btn-light mt-3">
+                        <i class="bi bi-chevron-right"></i> Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--More about-->
+    <section id="learn" class="p-5 bg-dark">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md p-5">
+                    <h2 class="text-white">Weekends are for smoothies</h2>
+                    <p class="lead text-white">In the city on the weeks?</p>
+                    </p>
+                    <p class="text-white">Drop by for smoothies and breakfast oatmeal to power up your day, blended with fruit.</p> 
+                    <a href="#" class="btn btn-light mt-3">
+                        <i class="bi bi-chevron-right"></i> Read More
+                    </a>
+                </div>
+                <div class="col-md">
+                    <img src="{% static '/imgs/smoothie.jpg' %}" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>        
+
+    <!--Questions-->
+    <section id="questions" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <div class="accordion accordion-flush" id="questions">`
+                <!--item#1-->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-one" >
+                      Where are your fruits and vegetables harvested?
+                    </button>
+                  </h2>
+                  <div id="question-one" class="accordion-collapse collapse" data-bs-parent="#questions">`
+                    <div class="accordion-body">Our produce is harvested and comes from California, Washington, Florida, Idaho. We are in contact with the farmers. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum obcaecati eligendi deserunt vero! Obcaecati explicabo cumque, alias, adipisci deserunt, voluptas eaque ratione illum fugit corrupti quia nihil repellendus dolores atqu</div>
+                  </div>
+                </div>
+                <!--item#2-->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+                      What times are you open and what is your exact address?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+                <!--item#3-->
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree">
+                      Do you accept cryptocurrencies?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+
+
+{% endblock content %}

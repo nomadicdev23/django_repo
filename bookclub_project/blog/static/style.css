@@ -1,0 +1,18 @@
+.bg-custom {
+    background-color: green;
+}
+
+.navbar {
+    color:rgb(235, 236, 165);
+}
+
+#news {
+    background-color: rgb(180, 176, 115);
+}
+
+@media (min-width: 768px) {
+    .news-input {
+        width: 50%;
+    }
+    
+}
