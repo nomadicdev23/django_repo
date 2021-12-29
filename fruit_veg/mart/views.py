@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import requests
-import json
 from .forms import EmailForm
 
 #dummy data for sake of 'working with data for now'
