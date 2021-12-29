@@ -11,7 +11,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 
-
+EXPOSE 8000
 # start to run the server
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
