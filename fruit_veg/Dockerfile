@@ -1,17 +1,21 @@
-# Dockefile
+# pull the official base image
+FROM python:3.8.3-alpine
 
-# the image we would be using as a base, in our case we are using official Python runtime as a parent image.
-FROM  python:3.8    
+# set work directory
+WORKDIR /usr/src/app
 
-WORKDIR /app
-COPY requirements.txt requirements.txt
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# install dependencies
+RUN pip install --upgrade pip 
+COPY ./requirements.txt /usr/src/app
 RUN pip install -r requirements.txt
 
-# mounting the application code to the image
-COPY . .
-
+# copy project
+COPY . /usr/src/app
 
 EXPOSE 8000
-# start to run the server
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
