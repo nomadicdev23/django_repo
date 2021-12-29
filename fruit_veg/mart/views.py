@@ -48,11 +48,11 @@ def home(request):
         "url" : catdata["url"]
     }
     
-    return render(request, 'blog/home.html', context)
+    return render(request, 'mart/home.html', context)
 
 
 def about(request):
-    return render(request, 'blog/about.html', {'title': 'About'})
+    return render(request, 'mart/about.html', {'title': 'About'})
 
 
 
